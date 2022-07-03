@@ -27,13 +27,6 @@ const UserSchema = new Schema(
                 type: Types.ObjectId,
                 ref: 'Friend'
             }
-        ],
-        toppings: [],
-        comments: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Comment'
-            }
         ]
     },
     {
