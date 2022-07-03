@@ -96,4 +96,4 @@ const userController = {
       }
 };
 
-module.exports = pizzaController;
+module.exports = userController;

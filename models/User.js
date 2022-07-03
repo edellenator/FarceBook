@@ -1,4 +1,3 @@
-const { truncate } = require('fs/promises');
 const {Schema, model, Types} = require('mongoose');
 
 const UserSchema = new Schema(
@@ -31,7 +30,7 @@ const UserSchema = new Schema(
     },
     {
         toJSON: {
-        virtuals: truncate
+        virtuals: true
         },
         // prevents virtuals from creating duplicate of _id as `id`
         id: false
