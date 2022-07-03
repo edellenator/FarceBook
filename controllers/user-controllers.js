@@ -27,7 +27,7 @@ const userController = {
         .then(dbUserData => {
             // If no user is found, send 404
             if (!dbUserData) {
-                res.status(404).json({ message: 'No pizza found with this id!' });
+                res.status(404).json({ message: 'No user found with this id!' });
                 return;
             }
             res.json(dbUserData);
@@ -37,7 +37,7 @@ const userController = {
             res.status(400).json(err);
         });
     },
-    // createPizza
+    // createUser
     createUser({ body }, res) {
         User.create(body)
             .then(dbUserData => res.json(dbUserData))
@@ -52,7 +52,7 @@ const userController = {
         )
         .then(dbUserData => {
           if(!dbUserData) {
-            res.status(404).json({message: 'No user found wth this id!'});
+            res.status(404).json({message: 'No user found with this id!'});
             return
           }
           res.json(dbUserData);
@@ -76,7 +76,7 @@ const userController = {
         User.findOne({ _id: params.id })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No pizza found with this id!' });
+                res.status(404).json({ message: 'No user found with this id!' });
                 return;
             }
             res.json(dbUserData);
