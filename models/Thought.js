@@ -37,7 +37,7 @@ const ThoughtSchema = new Schema(
             required: true,
             trim: true,
             minLength: [1, 'Is your brain empty? I didn\'t think so! Add something here.'],
-            maxLength: [160, 'Brevity is the key to wit, try using fewer characters (160 max)']
+            maxLength: [260, 'Brevity is the key to wit, try using fewer characters (260 max)']
         },
         createdAt: {
             type: Date,
