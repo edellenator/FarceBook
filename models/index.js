@@ -1,5 +1,5 @@
-import Thought from './Thought';
+const Thought = require('./Thought');
 
-import User from './User'
+const User = require('./User'); 
 
-module.exports = { Thought, User }
+module.exports = { Thought, User };

@@ -21,21 +21,18 @@ const UserSchema = new Schema(
                 ref: 'Thought'
             }
         ],
-        friends: [
-            {
-                type: Types.ObjectId,
-                ref: 'Friend'
-            }
-        ]
+        friends: [this]
     },
     {
         toJSON: {
-        virtuals: true
+        virtuals: true,
+        getters: true
         },
         // prevents virtuals from creating duplicate of _id as `id`
         id: false
     }
 );
+
 
 UserSchema.virtual('friendCount').get(function() {
     return this.friends.length
